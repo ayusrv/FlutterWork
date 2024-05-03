@@ -38,8 +38,13 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: ListView.separated(itemBuilder: (context, index) {
           return ListTile(
-            leading: Text('${index+1}'),
-            title: Text(arrName[index]),
+            leading: const CircleAvatar(
+              backgroundImage: AssetImage('assets/images/image.jpg'),
+              // radius: 50,
+              // you can add child to add widget in this circular image also
+              // maxRadius: 30,
+            ),
+            title: Text(arrName[index], style:const TextStyle(fontFamily: 'FontMain', fontWeight: FontWeight.w100),),
             subtitle: const Text('Number'),
             trailing: const Icon(Icons.add),
           );
