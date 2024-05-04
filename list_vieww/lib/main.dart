@@ -10,9 +10,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.brown,
+      ),
       home: MyHomePage(),
     );
   }
@@ -32,7 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
     var arrName = ["Ayush", "Himanshu", "Kshitij", "Aman", "Abhishek", "Ved Tanwar", "Akshit", "Satyam", "Lakshay", "Shivam"];
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: Theme.of(context).primaryColor,
         title: const Text("Title"),
       ),
       body: Center(
